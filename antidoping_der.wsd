@@ -1,0 +1,27 @@
+@startuml antidoping_schema
+
+hide circle
+skinparam linetype ortho
+
+entity "atletas" as atletas {
+  *id : INT <<PK>>
+  --
+  nome : VARCHAR
+  idade : INT
+  peso : DECIMAL
+  altura : INT
+  esporte : VARCHAR
+}
+
+entity "testes_antidoping" as testes {
+  *id : INT <<PK>>
+  --
+  *atleta_id : INT <<FK>>
+  data_exame : DATETIME
+  resultado_positivo : BOOLEAN
+  substancia_detectada : VARCHAR
+}
+
+atletas ||..o{ testes
+
+@enduml
