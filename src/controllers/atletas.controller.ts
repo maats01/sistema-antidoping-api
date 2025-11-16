@@ -28,7 +28,7 @@ class AtletasController {
             return res.status(200).json(atleta);
         
         } catch (error) {
-            return res.status(500).json({ error: "Erro interno ao consultar atleta." })
+            return res.status(500).json({ error: "Erro interno ao consultar atleta." });
         }
     }
 
@@ -46,11 +46,10 @@ class AtletasController {
         
         try {
             const novo_atleta: Atleta = await atletasService.create(atleta_create_input);
-            
             return res.status(201).json(novo_atleta);
 
         } catch (error) {
-            return res.status(400).json(error);
+            return res.status(400).json({ error: "Erro ao adicionar um novo atleta." });
         }
     }
     
@@ -73,7 +72,7 @@ class AtletasController {
             return res.status(200).json(atleta_atualizado);
 
         } catch (error) {
-            return res.status(400).json(error);
+            return res.status(400).json({ error: "Erro ao atualizar os dados do atleta." });
         }
     }
 
@@ -84,13 +83,13 @@ class AtletasController {
             const is_deleted: boolean = await atletasService.delete(id);
 
             if (is_deleted) {
-                return res.status(200).json({ msg: "Atleta deletado com sucesso." })
+                return res.status(200).json({ msg: "Atleta deletado com sucesso." });
             }
 
-            return res.status(404).json({ error: "Atleta não encontrado." })
+            return res.status(404).json({ error: "Atleta não encontrado." });
         
         } catch (error) {
-            return res.status(500).json({ error: "Erro interno ao deletar o registro." })
+            return res.status(500).json({ error: "Erro interno ao deletar o registro." });
         }
     }
 }
