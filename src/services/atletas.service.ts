@@ -50,3 +50,5 @@ class AtletasService {
         return true;
     }
 }
+
+export default new AtletasService();

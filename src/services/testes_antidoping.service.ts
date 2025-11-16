@@ -50,3 +50,5 @@ class TestesAntidopingService {
         return true;
     }
 }
+
+export default new TestesAntidopingService();
