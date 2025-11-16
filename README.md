@@ -47,12 +47,12 @@ API para gerenciamento de atletas e seus exames médicos.
 - **Resposta de sucesso:**
   ```json
   {
-    "id": 4,
-    "nome": "Lucas Silveira",
-    "idade": 21,
-    "peso": "73.6",
-    "altura": 178,
-    "esporte": "Nataçao"
+      "id": 4,
+      "nome": "Lucas Silveira",
+      "idade": 21,
+      "peso": "73.6",
+      "altura": 178,
+      "esporte": "Nataçao"
   }
 
 ### Exemplo do corpo da requisição para o endpoint `PUT /atletas/{id}`
@@ -66,12 +66,12 @@ API para gerenciamento de atletas e seus exames médicos.
 - **Resposta de sucesso:**
   ```json
   {
-    "id": 4,
-    "nome": "Lucas Silveira",
-    "idade": 21,
-    "peso": "73.6",
-    "altura": 178,
-    "esporte": "Futebol"
+      "id": 4,
+      "nome": "Lucas Silveira",
+      "idade": 21,
+      "peso": "73.6",
+      "altura": 178,
+      "esporte": "Futebol"
   }
 
 ### Exemplo do corpo da requisição para o endpoint `POST /testes-antidoping`
@@ -80,19 +80,19 @@ API para gerenciamento de atletas e seus exames médicos.
 - **Corpo da Requisição (Body):**
   ```json
   {
-    "data_exame": "2025-09-10",
-    "resultado_positivo": true,
-    "substancia_detectada": "Trembolona",
-    "atleta_id": 3
+      "data_exame": "2025-09-10",
+      "resultado_positivo": true,
+      "substancia_detectada": "Trembolona",
+      "atleta_id": 3
   }
 - **Resposta de sucesso:**
   ```json
   {
-        "id": 1,
-        "data_exame": "2025-09-10T00:00:00.000Z",
-        "resultado_positivo": true,
-        "substancia_detectada": "Trembolona",
-        "atleta_id": 3
+      "id": 1,
+      "data_exame": "2025-09-10T00:00:00.000Z",
+      "resultado_positivo": true,
+      "substancia_detectada": "Trembolona",
+      "atleta_id": 3
   }
 Obs.: Caso `"resultado_positivo": false`, o campo `substancia_detectada` deve ser `null`.
 
@@ -102,16 +102,16 @@ Obs.: Caso `"resultado_positivo": false`, o campo `substancia_detectada` deve se
 - **Corpo da Requisição (Body):**
   ```json
   {
-    "data_exame": "2025-10-01"
+      "data_exame": "2025-10-01"
   }
 - **Resposta de sucesso:**
   ```json
   {
-        "id": 1,
-        "data_exame": "2025-10-01T00:00:00.000Z",
-        "resultado_positivo": true,
-        "substancia_detectada": "Trembolona",
-        "atleta_id": 3
+    "id": 1,
+    "data_exame": "2025-10-01T00:00:00.000Z",
+    "resultado_positivo": true,
+    "substancia_detectada": "Trembolona",
+    "atleta_id": 3
   }
 
 ## Instalação e execução
