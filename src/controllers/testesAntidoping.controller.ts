@@ -100,3 +100,5 @@ class TestesAntidopingController {
         }
     }
 }
+
+export default new TestesAntidopingController();

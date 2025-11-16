@@ -16,6 +16,7 @@ class TestesAntidopingService {
     }
 
     async create(data: Prisma.TesteCreateInput): Promise<Teste> {
+        data.data_exame = new Date(data.data_exame + "T00:00:00Z");
         const teste: Teste = await prisma.teste.create({
             data: data
         });
@@ -24,6 +25,7 @@ class TestesAntidopingService {
     }
 
     async update(id: number, data: Prisma.TesteUpdateInput): Promise<Teste> {
+        data.data_exame = new Date(data.data_exame + "T00:00:00Z");
         const teste_atualizado: Teste = await prisma.teste.update({
             where: {
                 id: id

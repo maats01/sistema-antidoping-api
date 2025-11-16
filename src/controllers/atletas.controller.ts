@@ -93,3 +93,5 @@ class AtletasController {
         }
     }
 }
+
+export default new AtletasController();
